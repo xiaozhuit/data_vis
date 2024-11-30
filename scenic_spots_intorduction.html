@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Cloud Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.6/wordcloud2.min.js"></script>
+    <style>
+      #word-cloud {
+        width: 100%;
+        height: 700px; /* 增大容器高度 */
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="word-cloud"></div>
+    <script>
+      // 正确的词云数据格式
+      const wordData = [
+        ["山间", 100],
+        ["夜晚", 97],
+        ["晚霞", 86],
+        ["湖面", 86],
+        ["阳光", 81],
+        ["秋天", 78],
+        ["日落", 77],
+        ["雨后", 74],
+        ["清新", 73],
+        ["沙漠", 73],
+        ["如同", 72],
+        ["春天", 72],
+        ["公园", 71],
+        ["冬季", 71],
+        ["田野", 69],
+        ["银装素裹", 69],
+        ["森林", 67],
+        ["星空", 66],
+        ["美不胜收", 65],
+        ["山顶", 63],
+        ["如梦如幻", 61],
+        ["世界", 59],
+        ["静谧", 59],
+        ["高山", 57],
+        ["秋日", 57],
+        ["落叶", 57],
+        ["早晨", 57],
+        ["大地", 57],
+        ["宁静致远", 57],
+        ["雪花", 56],
+        ["一片", 55],
+        ["天空", 55],
+        ["夏日", 54],
+        ["海边", 53],
+        ["沙滩", 50],
+        ["山谷", 50],
+        ["洒满", 50],
+        ["希望", 50],
+        ["宁静", 49],
+        ["清晨", 49],
+        ["河流", 49],
+        ["湿润", 49],
+        ["城市", 47],
+        ["湖边", 46],
+        ["波光粼粼", 46],
+        ["雨中", 43],
+        ["如火", 43],
+        ["风景如画", 42],
+        ["夏夜", 42],
+        ["色彩斑斓", 40],
+        ["空气清新", 40],
+        ["河畔", 40],
+        ["仙境", 40],
+        ["繁星点点", 40],
+        ["迷人", 40],
+        ["金黄", 39],
+        ["探索", 39],
+        ["光芒", 38],
+        ["空气", 38],
+        ["日出", 38],
+        ["生机勃勃", 38],
+        ["鸟语花香", 38],
+        ["晨雾", 38],
+        ["历史", 36],
+        ["晨光", 36],
+        ["清凉", 36],
+        ["山色", 35],
+        ["光影", 35],
+        ["清澈见底", 34],
+        ["景色", 33],
+        ["随风", 33],
+        ["飘飘", 33],
+        ["林间", 33],
+        ["湖泊", 32],
+        ["雪后", 32],
+        ["海浪", 32],
+        ["冬日", 32],
+        ["丰收", 31],
+        ["晨曦", 31],
+        ["黄昏", 31],
+        ["夕阳", 31],
+        ["映红", 31],
+        ["缭绕", 31],
+        ["古老", 30],
+        ["洗净", 30],
+        ["古镇", 30],
+        ["壮丽", 30],
+        ["绿意盎然", 30],
+        ["记录", 30],
+        ["五彩缤纷", 29],
+        ["垂柳", 29],
+        ["小溪", 29],
+        ["山峦", 29],
+        ["无比", 29],
+        ["硕果累累", 29],
+        ["秋风", 29],
+        ["交错", 29],
+        ["午后", 28],
+        ["无声", 28],
+        ["绿树成荫", 28],
+      ];
+      // 计算动态的 weightFactor
+      const maxFrequency = Math.max(...wordData.map(([_, freq]) => freq));
+      const weightFactor = 100 / maxFrequency; // 动态调整单词大小
+
+      const options = {
+        list: wordData,
+        gridSize: 15, // 增大间距
+        weightFactor: weightFactor, // 动态计算
+        fontFamily: "Arial",
+        color: function () {
+          return `hsl(${Math.random() * 360}, 100%, 50%)`; // 随机颜色
+        },
+        rotateRatio: 0.3, // 关闭旋转
+        rotationSteps: 2,
+        maxWords: 100, // 显示最多 100 个词
+        backgroundColor: "#f0f0f0",
+      };
+
+      const container = document.getElementById("word-cloud");
+      if (container) {
+        WordCloud(container, options);
+      } else {
+        console.error("Container element not found!");
+      }
+    </script>
+  </body>
+</html>

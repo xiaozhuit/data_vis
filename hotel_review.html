@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Cloud Example</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.6/wordcloud2.min.js"></script>
+    <style>
+      #word-cloud {
+        width: 100%;
+        height: 700px; /* 增大容器高度 */
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="word-cloud"></div>
+    <script>
+      // 正确的词云数据格式
+      const wordData = [
+        ["房间", 337],
+        ["酒店", 309],
+        ["不错", 306],
+        ["干净", 360],
+        ["服务", 326],
+        ["方便", 316],
+        ["非常", 399],
+        ["前台", 343],
+        ["卫生", 304],
+        ["位置", 287],
+        ["环境", 252],
+        ["交通", 247],
+        ["特别", 239],
+        ["热情", 212],
+        ["入住", 183],
+        ["性价比", 173],
+        ["服务态度", 170],
+        ["整洁", 152],
+        ["很大", 149],
+        ["早餐", 136],
+        ["体验", 126],
+        ["设施", 120],
+        ["安静", 118],
+        ["价格", 110],
+        ["满意", 106],
+        ["比较", 99],
+        ["很近", 98],
+        ["便利", 94],
+        ["舒服", 93],
+        ["舒适", 90],
+        ["推荐", 88],
+        ["总体", 84],
+        ["可以", 79],
+        ["小姐姐", 77],
+        ["态度", 77],
+        ["整体", 75],
+        ["出行", 73],
+        ["地理位置", 72],
+        ["地铁站", 71],
+        ["齐全", 70],
+        ["很多", 64],
+        ["方面", 63],
+        ["周到", 61],
+        ["实惠", 58],
+        ["附近", 54],
+        ["宽敞", 54],
+        ["周边", 54],
+        ["值得", 50],
+        ["丰富", 48],
+        ["停车", 48],
+        ["地铁", 44],
+        ["楼下", 44],
+        ["贴心", 43],
+        ["很棒", 42],
+        ["免费", 41],
+        ["好评", 41],
+        ["晚上", 41],
+        ["超级", 40],
+        ["细致", 40],
+        ["好找", 40],
+        ["吃饭", 39],
+        ["这个", 39],
+        ["喜欢", 39],
+        ["服务员", 38],
+        ["空间", 38],
+        ["下次", 37],
+        ["装修", 37],
+        ["来说", 34],
+        ["好吃", 32],
+        ["距离", 31],
+        ["客房", 31],
+        ["成都", 30],
+        ["周围", 30],
+        ["隔音", 29],
+        ["住宿", 29],
+        ["温馨", 28],
+        ["一家", 28],
+        ["地铁口", 28],
+        ["优越", 28],
+        ["停车场", 27],
+        ["选择", 26],
+        ["没有", 26],
+        ["我们", 25],
+        ["这里", 25],
+        ["工作人员", 25],
+        ["地方", 25],
+        ["味道", 24],
+        ["总的来说", 23],
+        ["机场", 22],
+        ["服务周到", 22],
+        ["出差", 22],
+        ["合适", 22],
+        ["老板娘", 21],
+        ["本次", 21],
+        ["热情周到", 21],
+        ["必须", 20],
+        ["还有", 20],
+        ["风格", 20],
+        ["一次", 19],
+        ["卫生间", 19],
+      ];
+      // 计算动态的 weightFactor
+      const maxFrequency = Math.max(...wordData.map(([_, freq]) => freq));
+      const weightFactor = 150 / maxFrequency; // 动态调整单词大小
+
+      const options = {
+        list: wordData,
+        gridSize: 15, // 增大间距
+        weightFactor: weightFactor, // 动态计算
+        fontFamily: "Arial",
+        color: function () {
+          return `hsl(${Math.random() * 360}, 100%, 50%)`; // 随机颜色
+        },
+        rotateRatio: 0.3, // 关闭旋转
+        rotationSteps: 2,
+        maxWords: 80, // 显示最多 100 个词
+        backgroundColor: "#f0f0f0",
+      };
+
+      const container = document.getElementById("word-cloud");
+      if (container) {
+        WordCloud(container, options);
+      } else {
+        console.error("Container element not found!");
+      }
+    </script>
+  </body>
+</html>

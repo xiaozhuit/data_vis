@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body>
+    <!--头部-->
+    <div class="header">
+      成都市美食景点住宿数据展示
+      <a href="javascript:;" class="a-access">
+        <button class="button type1">返回</button>
+      </a>
+    </div>
+    <!--主体-->
+    <div class="main clearfix">
+      <!-- 左边div -->
+      <div class="main-left">
+        <div class="border-container">
+          <div class="name-title"></div>
+          <!-- <div class="name-title"></div> -->
+          <!-- 左上 -->
+          <div id="radar"></div>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+        <div class="border-container">
+          <!-- 左下 -->
+          <div class="name-title">酒店分析</div>
+          <div id="graduateyear"></div>
+          <ul class="three-pie clearfix">
+            <li>
+              <div id="sexrate"></div>
+            </li>
+            <li>
+              <div id="householdrate"></div>
+            </li>
+          </ul>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+      </div>
+
+      <!-- 中部div -->
+      <div class="main-middle">
+        <div class="border-container">
+          <div id="mapadd"></div>
+          <div class="number-show">
+            <ul>
+              <li>
+                <a href="foods_review.html" class="span-name">美食评价</a>
+              </li>
+              <li>
+                <span class="span-number-show">41324</span>
+              </li>
+              <li>
+                <a href="recommend.html"  class="span-name">美食推荐菜</a>
+              </li>
+              <li>
+                <span class="span-number-show">25674</span>
+              </li>
+              <li>
+                <a href="hotel_review.html" class="span-name">酒店评价</a>
+              </li>
+              <li>
+                <span class="span-number-show">32162</span>
+              </li>
+              <li>
+                <a href="scenic_spots_intorduction.html" class="span-name">景点评价</a>
+              </li>
+              <li>
+                <span class="span-number-show">31462</span>
+              </li>
+            </ul>
+          </div>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+        <div class="border-container">
+          <ul class="teacher-pie clearfix">
+            <li>
+              <div class="name-title">主城区酒店分布数量</div>
+              <div id="courserate"></div>
+            </li>
+            <li>
+              <div class="name-title">其余地区酒店分布数量</div>
+              <div id="professionrate"></div>
+            </li>
+          </ul>
+
+          <div class="name-title">攻略数前五的景点基本信息</div>
+          <div id="changedetail"></div>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+      </div>
+      <!-- 右边div -->
+      <div class="main-right">
+        <div class="border-container">
+          <div class="name-title">区域总览数据</div>
+          <!-- 右上表1 -->
+          <table class="table table-kingdargen">
+            <thead>
+              <tr>
+                <th>区域</th>
+                <th>景点数量</th>
+                <th>美食数量</th>
+                <th>酒店数量</th>
+                <th>人均美食消费</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>武侯区</td>
+                <td>198</td>
+                <td>370</td>
+                <td>289</td>
+                <td>180</td>
+              </tr>
+              <tr>
+                <td>青羊区</td>
+                <td>230</td>
+                <td>484</td>
+                <td>312</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td>锦江区</td>
+                <td>175</td>
+                <td>306</td>
+                <td>275</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>双流区</td>
+                <td>245</td>
+                <td>398</td>
+                <td>330</td>
+                <td>170</td>
+              </tr>
+              <tr>
+                <td>金牛区</td>
+                <td>215</td>
+                <td>340</td>
+                <td>305</td>
+                <td>185</td>
+              </tr>
+              <tr>
+                <td>都江堰</td>
+                <td>280</td>
+                <td>475</td>
+                <td>360</td>
+                <td>130</td>
+              </tr>
+              <tr>
+                <td>成华区</td>
+                <td>205</td>
+                <td>392</td>
+                <td>295</td>
+                <td>175</td>
+              </tr>
+              <tr>
+                <td>龙泉驿区</td>
+                <td>250</td>
+                <td>315</td>
+                <td>340</td>
+                <td>180</td>
+              </tr>
+              <tr>
+                <td>邛崃</td>
+                <td>390</td>
+                <td>475</td>
+                <td>280</td>
+                <td>140</td>
+              </tr>
+              <tr>
+                <td>大邑</td>
+                <td>420</td>
+                <td>392</td>
+                <td>310</td>
+                <td>120</td>
+              </tr>
+              <tr>
+                <td>新都区</td>
+                <td>240</td>
+                <td>315</td>
+                <td>325</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>崇州</td>
+                <td>420</td>
+                <td>359</td>
+                <td>300</td>
+                <td>135</td>
+              </tr>
+              <tr>
+                <td>彭州</td>
+                <td>312</td>
+                <td>289</td>
+                <td>320</td>
+                <td>140</td>
+              </tr>
+            </tbody>
+          </table>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+        <!-- 右中条形图 -->
+        <div class="border-container">
+          <div class="name-title">区域数据图形展示</div>
+          <div id="juniorservice"></div>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+        <!-- 右下折线条形混合图 -->
+        <div class="border-container">
+          <div class="name-title">美食类型数据展示</div>
+          <div id="edubalance"></div>
+          <span class="top-left border-span"></span>
+          <span class="top-right border-span"></span>
+          <span class="bottom-left border-span"></span>
+          <span class="bottom-right border-span"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/echarts.min.js"></script>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/map/sichuan.js"></script>
+</html>
