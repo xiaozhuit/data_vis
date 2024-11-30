@@ -8,7 +8,7 @@
     <style>
       #word-cloud {
         width: 100%;
-        height: 700px; /* 增大容器高度 */
+        height: 1000px; /* 增大容器高度 */
         border: 1px solid #ddd;
       }
     </style>
@@ -121,7 +121,7 @@
       ];
       // 计算动态的 weightFactor
       const maxFrequency = Math.max(...wordData.map(([_, freq]) => freq));
-      const weightFactor = 150 / maxFrequency; // 动态调整单词大小
+      const weightFactor = 180 / maxFrequency; // 动态调整单词大小
 
       const options = {
         list: wordData,
